@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react'
 import style from './index.module.css'
 
-export class NavBar extends PureComponent {
+export class Navbar extends PureComponent {
   render() {
     return (
-      <div>NavBar</div>
+      <h1>Navigation</h1>
     )
   }
 }
 
-export default NavBar
+export default Navbar

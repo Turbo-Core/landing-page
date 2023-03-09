@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
+import Layout from "@/components/Layout"
+import type { NextPageWithLayout } from './_app'
+import { ReactElement } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const Page: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -15,8 +13,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar />
+        <div>Page Content</div>
       </main>
     </>
   )
 }
+
+Page.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
+
+export default Page
