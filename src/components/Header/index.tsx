@@ -5,14 +5,21 @@ import { Button } from "antd";
 import { FaBookOpen, FaStar } from "react-icons/fa";
 import { ConfigProvider, theme } from "antd";
 import classNames from "classnames";
-
+import { Typography } from "@mui/material";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import Image from "next/image";
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import style from "./style.module.css";
 
 const nunitoBold = Nunito({ subsets: ["latin"], weight: "800" });
 
 export default function Header({ darkMode }: { darkMode: boolean }) {
+    const themeHook = useTheme();
+    const md = useMediaQuery(themeHook.breakpoints.down('md'));
+    console.log(md);
     return (
-        <>
+        <div style={{display: "flex", flexDirection: "column", "alignItems": "center"}}>
             <div className={style.header}>
                 <h1
                     className={classNames(nunitoBold.className, style.leadingText)}
@@ -26,6 +33,9 @@ export default function Header({ darkMode }: { darkMode: boolean }) {
                     backends.
                 </h1>
             </div>
+            <Typography variant="body1" className={style.bodyText}> 
+            A fast, scalable, and reliable backend-as-a-service built with Rust. Designed to simplify app development, TurboCore lets you do all the traditional backend stuff without needing to develop a backend yourself.
+            </Typography>
             <div className={style.actions}>
                 <ConfigProvider
                     theme={{
@@ -50,6 +60,12 @@ export default function Header({ darkMode }: { darkMode: boolean }) {
                     </Button>
                 </ConfigProvider>
             </div>
-        </>
+            <ParallaxProvider>
+                    <Parallax speed={md ? 5 : 20}>
+                        <Image width={1600} height={900} className={style.parallaxImage} src="https://picsum.photos/1600/900" alt="dashboard" style={md ? {transform: "translateY(100px)"} : {} }/>
+                    </Parallax>
+            </ParallaxProvider>
+            <div style={md ? {height: "150px"} : {}} />
+        </div>
     );
 }

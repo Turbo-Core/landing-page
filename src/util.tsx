@@ -9,3 +9,10 @@ export const getMediaQueryPreference = (window: Window | null | undefined) => {
       return mql.matches ? "dark" : "light";
     }
   };
+
+export const isMobile = (window: Window | null | undefined) => {
+    if (!window) {
+        return;
+    }
+    return window.innerWidth < 768;
+}

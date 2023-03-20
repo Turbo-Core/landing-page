@@ -1,0 +1,10 @@
+.signUp {
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .signUp {
+        width: 75%;
+    }
+}

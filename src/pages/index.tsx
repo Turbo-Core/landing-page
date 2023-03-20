@@ -5,6 +5,12 @@ import { ReactElement, useEffect, useState } from "react";
 import Header from "@/components/Header";
 import { ConfigProvider, theme } from "antd";
 import { getMediaQueryPreference } from "@/util";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Martel_Sans } from "next/font/google";
+import Features from "@/components/Features";
+import { NextSeo } from "next-seo";
+
+const martel = Martel_Sans({ subsets: ["latin"], weight: "600" });
 
 const Page: NextPageWithLayout = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -14,24 +20,36 @@ const Page: NextPageWithLayout = () => {
     }, []);
 
     return (
-        <ConfigProvider
-            theme={{
-                algorithm: darkMode
-                    ? theme.darkAlgorithm
-                    : theme.defaultAlgorithm,
-            }}
+        <ThemeProvider
+            theme={createTheme({
+                typography: {
+                    fontFamily: martel.style.fontFamily,
+                },
+            })}
         >
-            <Head>
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <main>
-                <Header darkMode={darkMode} />
-            </main>
-        </ConfigProvider>
+            <ConfigProvider
+                theme={{
+                    algorithm: darkMode
+                        ? theme.darkAlgorithm
+                        : theme.defaultAlgorithm,
+                }}
+            >
+                <Head>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <main>
+                    <NextSeo
+                        title="TurboCore"
+                        description="A fast, scalable, and reliable backend-as-a-service built with Rust."
+                        canonical="https://turbocore.org/"
+                        // openGraph={{todo: "TODO"}}
+                        // twitter={{todo: "TODO"}}
+                    />
+                    <Header darkMode={darkMode} />
+                    <Features />
+                </main>
+            </ConfigProvider>
+        </ThemeProvider>
     );
 };
 

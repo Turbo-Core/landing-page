@@ -14,9 +14,29 @@
     font-size: 4rem;
     width: 75%;
     text-align: center;
+} 
+
+.bodyText {
+    font-size: 1.25rem;
+    width: 60%;
+    text-align: center;
+    margin: 2rem 0 !important;
+}
+
+.parallaxImage {
+    width: 70vw;
+    height: 40vw;
+    margin-top: 1.25rem;
+    border-radius: 2rem
 }
 
 @media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
     .actions {
         flex-direction: column;
         margin: 2rem;
@@ -26,5 +46,17 @@
     .leadingText {
         font-size: 2.5rem;
         width: 100%;
+    }
+
+    .bodyText {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .parallaxImage {
+        width: 90vw;
+        height: 50.625vw;
+        margin-top: -100px;
+        border-radius: 1rem;
     }
 }
