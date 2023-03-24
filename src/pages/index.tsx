@@ -7,8 +7,9 @@ import { ConfigProvider, theme } from "antd";
 import { getMediaQueryPreference } from "@/util";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Martel_Sans } from "next/font/google";
-import Features from "@/components/Features";
+import EarlyAccess from "@/components/EarlyAccess";
 import { NextSeo } from "next-seo";
+import Features from "@/components/Features";
 
 const martel = Martel_Sans({ subsets: ["latin"], weight: "600" });
 
@@ -25,6 +26,9 @@ const Page: NextPageWithLayout = () => {
                 typography: {
                     fontFamily: martel.style.fontFamily,
                 },
+                palette: {
+                    mode: darkMode ? "dark" : "light",
+                }
             })}
         >
             <ConfigProvider
@@ -46,6 +50,7 @@ const Page: NextPageWithLayout = () => {
                         // twitter={{todo: "TODO"}}
                     />
                     <Header darkMode={darkMode} />
+                    <EarlyAccess />
                     <Features />
                 </main>
             </ConfigProvider>

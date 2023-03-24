@@ -1,0 +1,40 @@
+.outerBox {
+    align-items: center;
+    background-color: rgba(127.5, 127.5, 127.5, 0.5);
+    border-radius: 72px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.7rem;
+    height: 52px;
+    justify-content: space-between;
+    margin-top: 40px;
+    max-width: 480px;
+    padding: 0 8px 0 24px;
+    width: 100%;
+}
+
+.input {
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    height: 52px;
+    outline: none;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.button {
+    align-items: center;
+    background-color: #355DF0;
+    border: 0;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    gap: 0.4em;
+    line-height: 1;
+    padding: 12px 18.4px;
+    white-space: nowrap;
+}

@@ -1,31 +1,87 @@
-import React from 'react'
-import TwoSides from '@/components/TwoSides'
-import { Typography } from '@mui/material'
-import style from './style.module.css'
-import Image from 'next/image'
+import React from "react";
+import style from "./style.module.css";
+import Grid2 from "@mui/material/Unstable_Grid2";
+import Card from "@/components/partials/Card";
+import { Typography } from "@mui/material";
+import { HiLightningBolt } from "react-icons/hi";
+import { FaGlobe, FaExpandArrowsAlt, FaLock, FaFeather, FaLightbulb } from "react-icons/fa";
+import { RiOpenSourceFill } from "react-icons/ri";
+import { IoExtensionPuzzleSharp } from "react-icons/io5";
 
-export default function index() {
-  return (
-    <>
-    <TwoSides
-        pre={
-            <Typography variant="h4" component="h2" gutterBottom>
-                Sign up for early access
+export default function Features() {
+    return (
+        <div className={style.outside}>
+            <Typography
+                variant="h4"
+                component="h2"
+                gutterBottom
+                className={style.title}
+                align="center"
+            >
+                Why use TurboCore?
             </Typography>
-        }
-        left={
-            <div className={style.signUp}>
-                <Typography variant="body1" gutterBottom>
-                    TurboCore is still in active development. Sign up for early access to be the first to try it out!
-                </Typography>
-            </div>
-        }
-        right={
-            <Image src="launch.svg" width={500} height={500} alt="A rocket launching" style={{width: "100%", height: "auto", scale: "0.6"}}/>
-        }
-        reverseOnMD={true}
-    />
-        <div style={{height: "600px"}}/> {/* This is a placeholder */}
-    </>
-  )
+            {/*
+                Features:
+                - Lightning Fast
+                - Easy to use
+                - Open Source and Free
+                - Cross Platform
+                - Extensible
+                - Secure
+                - Lightweight
+                - Customizable
+            */}
+            <Grid2 container spacing={5}>
+                <Grid2 xs={12} sm={6} md={4}>
+                    <Card
+                        Icon={HiLightningBolt}
+                        title="Lightning Fast"
+                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
+                    />
+                </Grid2>
+                <Grid2 xs={12} sm={6} md={4}>
+                    <Card
+                        Icon={FaLightbulb}
+                        title="Easy to use"
+                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
+                    />
+                </Grid2>
+                <Grid2 xs={12} sm={6} md={4}>
+                    <Card
+                        Icon={RiOpenSourceFill}
+                        title="Free & Open Source"
+                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
+                    />
+                </Grid2>
+                <Grid2 xs={12} sm={6} md={4}>
+                    <Card
+                        Icon={FaGlobe}
+                        title="Cross Platform"
+                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
+                    />
+                </Grid2>
+                <Grid2 xs={12} sm={6} md={4}>
+                    <Card
+                        Icon={IoExtensionPuzzleSharp}
+                        title="Extensible"
+                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
+                    />
+                </Grid2>
+                <Grid2 xs={12} sm={6} md={4}>
+                    <Card
+                        Icon={FaLock}
+                        title="Secure"
+                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
+                    />
+                </Grid2>
+                <Grid2 xs={12} sm={6} md={4}>
+                    <Card
+                        Icon={FaFeather}
+                        title="Lightweight"
+                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
+                    />
+                </Grid2>
+            </Grid2>
+        </div>
+    );
 }

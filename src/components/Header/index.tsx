@@ -17,8 +17,8 @@ const nunitoBold = Nunito({ subsets: ["latin"], weight: "800" });
 export default function Header({ darkMode }: { darkMode: boolean }) {
     const themeHook = useTheme();
     const md = useMediaQuery(themeHook.breakpoints.down('md'));
-    console.log(md);
     return (
+        <>
         <div style={{display: "flex", flexDirection: "column", "alignItems": "center"}}>
             <div className={style.header}>
                 <h1
@@ -67,5 +67,6 @@ export default function Header({ darkMode }: { darkMode: boolean }) {
             </ParallaxProvider>
             <div style={md ? {height: "150px"} : {}} />
         </div>
+        </>
     );
 }
