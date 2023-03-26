@@ -11,6 +11,7 @@ import EarlyAccess from "@/components/EarlyAccess";
 import { NextSeo } from "next-seo";
 import Features from "@/components/Features";
 import Quote from "@/components/Quote";
+import Footer from "@/components/Footer";
 
 const martel = Martel_Sans({ subsets: ["latin"], weight: ["600", "900"] });
 
@@ -54,6 +55,7 @@ const Page: NextPageWithLayout = () => {
                     <EarlyAccess />
                     <Features />
                     <Quote />
+                    <Footer />
                 </main>
             </ConfigProvider>
         </ThemeProvider>
