@@ -18,8 +18,8 @@ export default function Card({
             {/* We're forced to define the gradient like this since the icons are SVGs*/}
             <svg width="0" height="0">
                 <radialGradient id="rg" r="150%" cx="30%" cy="107%">
-                    <stop stop-color="rgb(233, 44, 129)" offset="0.2" />
-                    <stop stop-color="#355DF0" offset="0.9" />
+                    <stop stopColor="rgb(233, 44, 129)" offset="0.2" />
+                    <stop stopColor="#355DF0" offset="0.9" />
                 </radialGradient>
             </svg>
             <MCard className={style.outsideDiv}>

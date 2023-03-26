@@ -12,7 +12,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import style from "./style.module.css";
 
-const nunitoBold = Nunito({ subsets: ["latin"], weight: "800" });
+const nunitoBold = Nunito({ subsets: ["latin"], weight: "1000" });
 
 export default function Header({ darkMode }: { darkMode: boolean }) {
     const themeHook = useTheme();

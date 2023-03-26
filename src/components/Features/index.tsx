@@ -74,13 +74,6 @@ export default function Features() {
                         description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
                     />
                 </Grid2>
-                <Grid2 xs={12} sm={6} md={4}>
-                    <Card
-                        Icon={FaFeather}
-                        title="Lightweight"
-                        description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dicta fugit natus provident alias perspiciatis id expedita aperiam consequuntur? Voluptas, dolores? Omnis, deserunt at! Architecto facere explicabo illum mollitia."
-                    />
-                </Grid2>
             </Grid2>
         </div>
     );

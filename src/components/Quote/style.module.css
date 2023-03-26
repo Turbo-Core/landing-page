@@ -1,0 +1,23 @@
+.quote {
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #333;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .quote {
+        color: #ddd
+    }
+}
+
+.out {
+    padding: 2rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid rgba(127.5, 127.5, 127.5, 0.75)
+}
+
+@media screen and (max-width: 768px) {
+    .out {
+        padding-bottom: 4rem;
+    }
+}

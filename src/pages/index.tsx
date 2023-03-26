@@ -10,8 +10,9 @@ import { Martel_Sans } from "next/font/google";
 import EarlyAccess from "@/components/EarlyAccess";
 import { NextSeo } from "next-seo";
 import Features from "@/components/Features";
+import Quote from "@/components/Quote";
 
-const martel = Martel_Sans({ subsets: ["latin"], weight: "600" });
+const martel = Martel_Sans({ subsets: ["latin"], weight: ["600", "900"] });
 
 const Page: NextPageWithLayout = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -52,6 +53,7 @@ const Page: NextPageWithLayout = () => {
                     <Header darkMode={darkMode} />
                     <EarlyAccess />
                     <Features />
+                    <Quote />
                 </main>
             </ConfigProvider>
         </ThemeProvider>

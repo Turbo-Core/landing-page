@@ -1,9 +1,12 @@
 .outside {
     margin: 6rem 2rem;
+    border-bottom: 1px solid rgba(127.5, 127.5, 127.5, 0.75);
+    padding-bottom: 6rem;
 }
 
 @media screen and (max-width: 768px) {
     .outside {
-        margin: 4rem 1rem
+        margin: 4rem 1rem;
+        padding-bottom: 4rem;
     }
 }
