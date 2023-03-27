@@ -36,7 +36,7 @@ export default function index() {
                 </Typography>
                 </div>
                 <div className={style.column}>
-                <Typography variant="h6" gutterBottom align="left" fontWeight={900}>
+                <Typography variant="h6" component="span" gutterBottom align="left" fontWeight={900}>
                     Sign up for early access!
                 </Typography>
                 <div style={{marginTop: "-30px", width:"100%"}}>
