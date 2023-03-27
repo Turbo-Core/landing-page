@@ -12,6 +12,7 @@ import { NextSeo } from "next-seo";
 import Features from "@/components/Features";
 import Quote from "@/components/Quote";
 import Footer from "@/components/Footer";
+import NotAnEasterEgg from "@/components/NotAnEasterEgg";
 
 const martel = Martel_Sans({ subsets: ["latin"], weight: ["600", "900"] });
 
@@ -66,7 +67,7 @@ const Page: NextPageWithLayout = () => {
                         }}
                         className={martel.className}
                     >
-                        {"Hey! You made it to the bottom. You're curious. I like that. You're awesome :)"}
+                        <NotAnEasterEgg />
                     </div>
                 </main>
             </ConfigProvider>
