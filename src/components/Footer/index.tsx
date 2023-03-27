@@ -19,7 +19,7 @@ export default function index() {
                 </Typography>
             </div>
             <div className={style.column}>
-                <Typography variant="h6" component="h6" gutterBottom align="left" fontWeight={900}> 
+                <Typography variant="h6" component="span" gutterBottom align="left" fontWeight={900}> 
                     Resources
                 </Typography>
                 <Typography variant="body1" gutterBottom align="left">

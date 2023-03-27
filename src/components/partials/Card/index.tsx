@@ -3,6 +3,7 @@ import React from "react";
 import style from "./style.module.css";
 import { Card as MCard, Paper } from "@mui/material";
 import { IconType } from "react-icons";
+import { getMediaQueryPreference } from "@/util";
 
 export default function Card({
     Icon,
@@ -13,12 +14,16 @@ export default function Card({
     title: string;
     description: string;
 }) {
+    const [darkMode, setDarkMode] = React.useState(true);
+    React.useEffect(() => {
+        setDarkMode(getMediaQueryPreference(window) == "dark");
+    }, []);
     return (
         <>
             {/* We're forced to define the gradient like this since the icons are SVGs*/}
             <svg width="0" height="0">
                 <radialGradient id="rg" r="150%" cx="30%" cy="107%">
-                    <stop stopColor="rgb(233, 44, 129)" offset="0.2" />
+                    <stop stopColor={darkMode ? "rgb(233, 44, 129)" : "#355DF0"} offset="0.2" />
                     <stop stopColor="#355DF0" offset="0.9" />
                 </radialGradient>
             </svg>
