@@ -30,7 +30,7 @@ const Page: NextPageWithLayout = () => {
                 },
                 palette: {
                     mode: darkMode ? "dark" : "light",
-                }
+                },
             })}
         >
             <ConfigProvider
@@ -56,6 +56,18 @@ const Page: NextPageWithLayout = () => {
                     <Features />
                     <Quote />
                     <Footer />
+                    <div
+                        style={{
+                            position: "relative",
+                            bottom: "0",
+                            left: "0",
+                            opacity: "0.5",
+                            fontSize: "0.8rem",
+                        }}
+                        className={martel.className}
+                    >
+                        {"Hey! You made it to the bottom. You're curious. I like that. You're awesome :)"}
+                    </div>
                 </main>
             </ConfigProvider>
         </ThemeProvider>
