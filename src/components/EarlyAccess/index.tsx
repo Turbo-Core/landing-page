@@ -29,8 +29,9 @@ export default function EarlyAccess() {
             <Image src="launch.svg" width={500} height={500} alt="A rocket launching" style={{width: "100%", height: "auto", scale: "0.6"}}/>
         }
         reverseOnMD={true}
-        style={{borderBottom: "1px solid rgba(127.5, 127.5, 127.5, 0.75)", borderTop: "1px solid rgba(127.5, 127.5, 127.5, 0.75)", marginTop: "-1rem" }}
-d    />
+        style={{borderBottom: "1px solid rgba(127.5, 127.5, 127.5, 0.75)", borderTop: "1px solid rgba(127.5, 127.5, 127.5, 0.75)", marginTop: "-1rem", padding: "2rem 0"}}
+    />
+    {/* Change the padding when an image is added */}
     </>
   )
 }

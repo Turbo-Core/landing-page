@@ -60,12 +60,15 @@ export default function Header({ darkMode }: { darkMode: boolean }) {
                     </Button>
                 </ConfigProvider>
             </div>
+            {/* Enable when we have a better image
             <ParallaxProvider>
                     <Parallax speed={md ? 5 : 20}>
                         <Image width={1600} height={900} className={style.parallaxImage} src="https://picsum.photos/1600/900" alt="dashboard" style={md ? {transform: "translateY(100px)"} : {} } loading="eager" />
                     </Parallax>
             </ParallaxProvider>
             <div style={md ? {height: "150px"} : {}} />
+            */}
+            <div style={{height: "100px"}}/>
         </div>
         </>
     );
