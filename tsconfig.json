@@ -19,6 +19,6 @@
       "@components": ["./src/components"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Footer/index.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Footer/index.tsx", "src/pages/signup.jsx"],
   "exclude": ["node_modules"]
 }

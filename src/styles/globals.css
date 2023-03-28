@@ -97,15 +97,30 @@ a {
   text-decoration: none;
 }
 
+.multipleChoice__optionWrapper.selected {
+    background-color: #5fcfff !important;
+    color: black !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+  .multipleChoice__optionWrapper.selected {
+    background-color: #e92c81 !important;
+    color: white !important;
   }
 }
 
 main {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.renderer-core-form-brand-logo img {
+  max-width: unset !important;
+  max-height: unset !important;
+  width: 250px;
 }
 
 @media screen and (max-width: 768px) {
