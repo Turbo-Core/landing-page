@@ -1,8 +1,11 @@
+// Wow, not only did you find the easter egg, but you also found the source code for it!
+// Have a cookie 🍪 :)
+
 import React from "react";
 
 export default function NotAnEasterEgg() {
     const phrases = [
-        "Hey! You made it to the bottom. You're curious. I like that. You're awesome :) P.S Try clicking me.",
+        "Hey! You made it to the bottom. You're curious. I like that. You're awesome :) P.S. Try clicking me.",
         "You found the easter egg. You can stop clicking.",
         "Seriously, stop clicking.",
         "Ok, you're not listening. I'll just ignore you.",
