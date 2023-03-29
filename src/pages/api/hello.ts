@@ -94,5 +94,5 @@ export default async function handler(
         return;
     }
 
-    res.status(200);
+    res.status(200).send("OK");
 }
