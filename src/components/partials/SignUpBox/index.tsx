@@ -1,15 +1,15 @@
 import React, { useState } from "react";
+import { useRouter } from 'next/router'
 import style from "./style.module.css";
 
 export default function SignUpBox({
     type = "text",
     placeholder = "",
-    callback= () => {},
 }: {
     type?: string;
     placeholder?: string;
-    callback?: (s: string) => any;
 }) {
+    const router = useRouter()
     const [value, setValue] = useState("");
     return (
         <div className={style.outerBox}>
@@ -19,7 +19,9 @@ export default function SignUpBox({
                 placeholder={placeholder}
                 onChange={(e) => setValue(e.target.value)}
             />
-            <button className={style.button} onClick={() => callback(value)}>Sign up</button>
+            <button className={style.button} onClick={() => {
+                router.push(`/signup?email=${value}`)
+            }}>Sign up</button>
         </div>
     );
 }

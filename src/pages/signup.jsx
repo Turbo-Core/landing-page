@@ -6,7 +6,7 @@ import { registerCoreBlocks } from "@quillforms/react-renderer-utils";
 import { getMediaQueryPreference } from "@/util";
 import { Martel_Sans } from "next/font/google";
 
-const martel = Martel_Sans({subsets: ["latin"], weight: ["600"]})
+const martel = Martel_Sans({ subsets: ["latin"], weight: ["600"] });
 
 registerCoreBlocks();
 export default function SignUp() {
@@ -42,19 +42,19 @@ export default function SignUp() {
                     choices: [
                         {
                             label: "Personal",
-                            value: "personal",
+                            value: "Personal",
                         },
                         {
-                            label: "Commercial",
-                            value: "commercial",
+                            label: "Business",
+                            value: "Business",
                         },
                         {
-                            label: "Academic",
-                            value: "academic",
+                            label: "Education",
+                            value: "Education",
                         },
                         {
                             label: "Other",
-                            value: "other",
+                            value: "Other",
                         },
                     ],
                     multiple: true,
@@ -68,7 +68,8 @@ export default function SignUp() {
                     required: true,
                     label: "How should we contact you?",
                     defaultValue: router.query.email,
-                    description: "We'll never share your email with anyone else. Promise :)",
+                    description:
+                        "We'll never share your email with anyone else. Promise :)",
                 },
             },
         ],
@@ -88,8 +89,11 @@ export default function SignUp() {
             progressBarBgColor: darkMode ? "#777" : "#aaa",
         },
         messages: {
-            "block.defaultThankYouScreen.label": "Thank you for signing up for early access to TurboCore! We'll be in touch soon.",
-        }
+            "block.defaultThankYouScreen.label": `Thank you for signing up for early access to TurboCore! We'll be in touch soon. </p>
+                <div style='margin-top: 20px; font-size: 1rem'>In the meantime, check out our
+                <a style="color: #5fcfff; text-decoration: underline;" href='https://twitter.com/TurboCoreBaaS' target='_blank'>Twitter</a>
+                to stay up to date with our progress ;)</div>`,
+        },
     };
 
     return (
@@ -98,19 +102,30 @@ export default function SignUp() {
                 <Form
                     formId="1"
                     formObj={formObj}
-                    onSubmit={(
+                    onSubmit={async (
                         data,
                         {
                             completeForm,
                             setIsSubmitting,
-                            goToBlock,
+                            setIsFieldValid,
                             setSubmissionErr,
+                            setFieldValidationErr,
                         }
                     ) => {
-                        setTimeout(() => {
-                            setIsSubmitting(false);
+                        setIsSubmitting(true);
+                        let res = await fetch("/api/hello", {
+                            method: "POST",
+                            body: JSON.stringify(data),
+                        });
+                        res = await res.json();
+                        if (res.message) {
+                            setSubmissionErr(res.message);
+                            setFieldValidationErr("email", res.message);
+                            setIsFieldValid("email", false);
+                        } else {
                             completeForm();
-                        }, 500);
+                        }
+                        setIsSubmitting(false);
                     }}
                 />
             </div>

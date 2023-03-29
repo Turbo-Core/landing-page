@@ -19,14 +19,22 @@
     "@types/react-dom": "18.0.11",
     "antd": "^5.3.1",
     "classnames": "^2.3.2",
+    "deep-email-validator": "^0.1.21",
+    "dotenv": "^16.0.3",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "fakefilter": "^0.1.433",
     "next": "13.2.3",
     "next-seo": "^5.15.0",
+    "nocodb-sdk": "^0.105.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-scroll-parallax": "^3.3.2",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "@types/validator": "^13.7.14"
   }
 }
