@@ -50,7 +50,9 @@ const Page: NextPageWithLayout = () => {
                         description="A fast, scalable, and reliable backend-as-a-service built with Rust."
                         canonical="https://turbocore.org/"
                         // openGraph={{todo: "TODO"}}
-                        // twitter={{todo: "TODO"}}
+                        twitter={{
+                            handle: "@TurboCoreBaaS",
+                        }}
                     />
                     <Header darkMode={darkMode} />
                     <EarlyAccess />

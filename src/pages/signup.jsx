@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { registerCoreBlocks } from "@quillforms/react-renderer-utils";
 import { getMediaQueryPreference } from "@/util";
 import { Martel_Sans } from "next/font/google";
+import { NextSeo } from "next-seo";
 
 const martel = Martel_Sans({ subsets: ["latin"], weight: ["600"] });
 
@@ -98,6 +99,16 @@ export default function SignUp() {
 
     return (
         didMount && (
+            <>
+            <NextSeo
+                        title="TurboCore Early Access"
+                        description="Sign up for early access to TurboCore, the fastest way to build a backend for your web app."
+                        canonical="https://turbocore.org/signup"
+                        // openGraph={{todo: "TODO"}}
+                        twitter={{
+                            handle: "@TurboCoreBaaS",
+                        }}
+                />
             <div style={{ width: "100%", height: "100vh" }}>
                 <Form
                     formId="1"
@@ -129,6 +140,7 @@ export default function SignUp() {
                     }}
                 />
             </div>
+            </>
         )
     );
 }
