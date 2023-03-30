@@ -79,7 +79,7 @@ export default async function handler(
     const api = new Api({
         baseURL: BASE_URL,
         headers: {
-            "xc-auth": AUTH_TOKEN, // Or with xc-token
+            "xc-token": AUTH_TOKEN, // Or with xc-token
         },
     });
 
