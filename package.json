@@ -12,6 +12,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.13",
+    "@next/bundle-analyzer": "^13.2.4",
     "@quillforms/react-renderer-utils": "^4.4.0",
     "@quillforms/renderer-core": "^4.4.0",
     "@types/node": "18.14.6",
